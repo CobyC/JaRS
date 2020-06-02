@@ -8,7 +8,7 @@ https://www.linkedin.com/posts/cobyc_jars-job-and-resource-scheduler-introductio
 
 ### JaRS in a process flow
 
-![jars flow image](documentation/images/JaRS_flow.PNG)
+![jars flow image](documentation/images/Jars_Diagram.png)
 
 
 ### Prerequisites
