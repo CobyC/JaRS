@@ -22,7 +22,7 @@ _**JaRS is build on .Net Frameworks but also makes use of 3rd party frameworks a
 [**_ServiceStack_**](https://servicestack.net/) as the services interface as well as other ServiceStack utilities and tools. That will be mentioned where implemented.
 
 
-[**_.Net Framework_**](https://dotnet.microsoft.com/) 4.6.1 and up (**_the road map includes (Core 5 and up)_*)
+[**_.Net Framework_**](https://dotnet.microsoft.com/) 4.8 and up (**_the road map includes (Core 5 and up)_*)
 
 
 [**_DevExpress_**](https://www.devexpress.com/) tools and utilities for UI controls
