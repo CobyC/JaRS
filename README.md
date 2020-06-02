@@ -8,7 +8,7 @@ https://www.linkedin.com/posts/cobyc_jars-job-and-resource-scheduler-introductio
 
 #**What is JaRS**
 
-![](documentation/images/jars_flow.png)
+![jars flow image](documentation/images/JaRS_flow.PNG)
 
 #**How to - Prerequisites**
 
