@@ -6,13 +6,21 @@ Watch the demo video posted on my linked in profile to see what JaRS is.
 https://www.linkedin.com/posts/cobyc_jars-job-and-resource-scheduler-introduction-activity-6635079166310002689-h08Q
 
 
-#**What is JaRS**
+### JaRS in a process flow
 
 ![jars flow image](documentation/images/JaRS_flow.PNG)
 
-#**How to - Prerequisites**
+
+### Prerequisites
 
 _**JaRS is build on .Net Frameworks but also makes use of 3rd party frameworks and tools each with it's own documentation and requirements.**_
+
+### Please Note
+- You will have to get a licence from [ServiceStack](https://servicestack.net/) to be able to build the software.
+- You will have to get a licence from [DevExpress](https://www.devexpress.com/) to be able to build the software
+  - you can use a trail version, but it is limited.
+- The current client is a WinForms application
+
 
 [**_Managed Extensibility Framework (MEF)_**](https://docs.microsoft.com/en-us/dotnet/framework/mef/) for extensibility (and Dependency Injection), this is part of the .Net Framework.
 
