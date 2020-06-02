@@ -1,9 +1,9 @@
 # JaRS
-Job and Resource Scheduler 
+*Job and Resource Scheduler *
 
 Watch the demo video posted on my linked in profile to see what JaRS is.
 
-https://www.linkedin.com/posts/cobyc_jars-job-and-resource-scheduler-introduction-activity-6635079166310002689-h08Q
+[Linked in Post](https://www.linkedin.com/posts/cobyc_jars-job-and-resource-scheduler-introduction-activity-6635079166310002689-h08Q)
 
 
 ### JaRS in a process flow
@@ -34,3 +34,8 @@ _**JaRS is build on .Net Frameworks but also makes use of 3rd party frameworks a
 
 
 [**_DevExpress_**](https://www.devexpress.com/) tools and utilities for UI controls
+
+#### To Do
+- [x] Upload source code
+- [x] Announce on linked in
+- [ ] do lots of documentation (create a wiki page)
