@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6041552-964B-4F42-BB22-A47194BFC245}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JARS.Test.BOS.Tests</RootNamespace>
+    <AssemblyName>JARS.Test.BOS.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Azure|AnyCPU'">
+    <OutputPath>bin\Azure\</OutputPath>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContextTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebServicesTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestAdapter">
+      <Version>2.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MSTest.TestFramework">
+      <Version>2.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="NHibernate">
+      <Version>5.1.6</Version>
+    </PackageReference>
+    <PackageReference Include="ServiceStack">
+      <Version>5.8.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JARS.BOS.Data\JARS.BOS.Data.csproj">
+      <Project>{F4FD7F14-2425-49CB-A97A-31164F537D6E}</Project>
+      <Name>JARS.BOS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.BOS.Entities\JARS.BOS.Entities.csproj">
+      <Project>{FCFA9374-67E8-417D-B70C-5DA15A5B8CF0}</Project>
+      <Name>JARS.BOS.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.BOS.SS.DTOs\JARS.BOS.SS.DTOs.csproj">
+      <Project>{3AC8BA2A-7DBF-4CC5-B44E-F17098A12BD6}</Project>
+      <Name>JARS.BOS.SS.DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.BOS.SS.Services\JARS.BOS.SS.Services.csproj">
+      <Project>{E5481D20-BBEE-40DC-95FD-957F79DFB359}</Project>
+      <Name>JARS.BOS.SS.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.Business.Boostrapper\JARS.Business.Bootstrap.csproj">
+      <Project>{953F6DC3-1321-4D29-B7A5-E3E009222820}</Project>
+      <Name>JARS.Business.Bootstrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.Client.Bootstrap\JARS.Client.Bootstrap.csproj">
+      <Project>{6FDDE09C-AFD6-4823-B435-8DFFBD600EE6}</Project>
+      <Name>JARS.Client.Bootstrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.Core.Client\JARS.Core.Client.csproj">
+      <Project>{FBC77B2E-3769-4C20-997D-EC115F52433F}</Project>
+      <Name>JARS.Core.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.Core.Data.Interfaces\JARS.Core.Data.Interfaces.csproj">
+      <Project>{FEEB3E69-1BB9-4460-866B-A56DA3CC6424}</Project>
+      <Name>JARS.Core.Data.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.Core.Interfaces\JARS.Core.Interfaces.csproj">
+      <Project>{C8CFD36A-8EF4-4081-A5CB-7E8B28978508}</Project>
+      <Name>JARS.Core.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.Core\JARS.Core.csproj">
+      <Project>{0A9DCCE1-E89F-4312-B6DE-1A1C5C06EC29}</Project>
+      <Name>JARS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.Data.NH\JARS.Data.NH.csproj">
+      <Project>{EC30D0E0-D17F-4848-8CFF-C257767F087B}</Project>
+      <Name>JARS.Data.NH</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.Entities\JARS.Entities.csproj">
+      <Project>{3C613236-83D6-45EA-812C-7FF5CB868F50}</Project>
+      <Name>JARS.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.SS.DTOs\JARS.SS.DTOs.csproj">
+      <Project>{1F30DCDC-5E70-4A89-B7CE-DA8FAC1BAC52}</Project>
+      <Name>JARS.SS.DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JARS.SS.Services\JARS.SS.Services.csproj">
+      <Project>{D3AC0859-7447-4D7E-AAE9-956D1B50DC23}</Project>
+      <Name>JARS.SS.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="App.Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+    </None>
+    <None Include="App.Release.config">
+      <DependentUpon>App.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

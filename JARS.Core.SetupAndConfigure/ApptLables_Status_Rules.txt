@@ -1,0 +1,73 @@
+﻿USE [JaRS_Dev]
+GO
+SET IDENTITY_INSERT [dbo].[ApptLabels] ON 
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (1, N'Default', N'([LabelKey] = ''1'')', N'JARS.Core.Interfaces.Entities.IStatusLabeledEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'DEFAULT', 0)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (2, N'Default', N'', N'JARS.Core.Interfaces.Entities.IViewOptionCustomEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'CUSTOM', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (3, N'P1 Priority', N'([Priority] = ''P1'')', N'JARS.Core.Interfaces.Entities.IViewOptionCustomEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -2517356, N'CUSTOM', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (4, N'Default', N'(([Location]) is null or (len([Location]) = 0))', N'JARS.Core.Interfaces.Entities.ILocatableEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'LOCATION', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (5, N'GA1 Location', N'([LocationCode] like ''GA1%'')', N'JARS.Core.Interfaces.Entities.ILocatableEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -3883625, N'LOCATION', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (6, N'GA2 Location', N'([LocationCode] like ''GA2%'')', N'JARS.Core.Interfaces.Entities.ILocatableEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -6966313, N'LOCATION', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (7, N'GA3 Location', N'([LocationCode] like ''GA3%'')', N'JARS.Core.Interfaces.Entities.ILocatableEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -7156260, N'LOCATION', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (8, N'GA4 Location', N'([LocationCode] like ''GA4%'')', N'JARS.Core.Interfaces.Entities.ILocatableEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -6571175, N'LOCATION', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (9, N'Default', N'', N'JARS.Core.Interfaces.Entities.IProgressStatusEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'STATUS', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (10, N'New', N'([ProgressStatus] = ''NEW'')', N'JARS.Core.Interfaces.Entities.IProgressStatusEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -3883625, N'STATUS', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (11, N'Started', N'([ProgressStatus] = ''START'')', N'JARS.Core.Interfaces.Entities.IProgressStatusEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -3358247, N'STATUS', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (12, N'Delayed', N'([ProgressStatus] = ''DELAY'')', N'JARS.Core.Interfaces.Entities.IProgressStatusEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'STATUS', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (13, N'Canceled', N'([ProgressStatus] = ''CANCEL'')', N'JARS.Core.Interfaces.Entities.IProgressStatusEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -8421505, N'STATUS', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (14, N'Completed', N'([ProgressStatus] = ''COMP'')', N'JARS.Core.Interfaces.Entities.IProgressStatusEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -16732080, N'STATUS', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (15, N'Default', N'', N'JARS.Core.Interfaces.Entities.ILineOfWorkEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'LINEOFWORK', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (16, N'WRK Label', N'([LineOfWork] = ''WRK'')', N'JARS.Core.Interfaces.Entities.ILineOfWorkEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -3942757, N'LINEOFWORK', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (17, N'FN Label', N'(([LineOfWork] = ''FEN'') Or ([LineOfWork] = ''FN''))', N'JARS.Core.Interfaces.Entities.ILineOfWorkEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -551354, N'LINEOFWORK', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (18, N'EL Label', N'[LineOfWork] in (''EL'',''ELEC'',''ELE'')', N'JARS.Core.Interfaces.Entities.ILineOfWorkEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -256, N'LINEOFWORK', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (19, N'PLU or PLUMB Label', N'(([LineOfWork] = ''PLU'') Or ([LineOfWork] = ''PLUMB''))', N'JARS.Core.Interfaces.Entities.ILineOfWorkEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -11235884, N'LINEOFWORK', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (20, N'Carpenters', N'(([LineOfWork] = ''CARP'') Or ([LineOfWork] = ''CP''))', N'JARS.Core.Interfaces.Entities.ILineOfWorkEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -7108269, N'LINEOFWORK', 99)
+GO
+INSERT [dbo].[ApptLabels] ([Id], [LabelName], [LabelCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (21, N'Far Far Away (GA5)', N'([LocationCode] like ''GA5%'')', N'JARS.Core.Interfaces.Entities.ILocatableEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -1872887, N'LOCATION', 99)
+GO
+SET IDENTITY_INSERT [dbo].[ApptLabels] OFF
+GO
+SET IDENTITY_INSERT [dbo].[ApptStatuses] ON 
+GO
+INSERT [dbo].[ApptStatuses] ([Id], [StatusName], [StatusCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (1, N'Default', N'([StatusKey] = ''1'')', N'JARS.Core.Interfaces.Entities.IStatusLabeledEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'DEFAULT', 0)
+GO
+INSERT [dbo].[ApptStatuses] ([Id], [StatusName], [StatusCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (2, N'Default', N'', N'JARS.Core.Interfaces.Entities.IViewOptionCustomEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'CUSTOM', 99)
+GO
+INSERT [dbo].[ApptStatuses] ([Id], [StatusName], [StatusCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (3, N'Default', N'(([Location]) is null or (len([Location]) = 0))', N'JARS.Core.Interfaces.Entities.ILocatableEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'LOCATION', 99)
+GO
+INSERT [dbo].[ApptStatuses] ([Id], [StatusName], [StatusCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (4, N'Default', N'', N'JARS.Core.Interfaces.Entities.IProgressStatusEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'STATUS', 99)
+GO
+INSERT [dbo].[ApptStatuses] ([Id], [StatusName], [StatusCriteria], [UseInterfaceType], [ColourRGB], [ViewName], [SortIndex]) VALUES (5, N'Default', N'', N'JARS.Core.Interfaces.Entities.ILineOfWorkEntity, JARS.Core.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', -12490271, N'LINEOFWORK', 99)
+GO
+SET IDENTITY_INSERT [dbo].[ApptStatuses] OFF
+GO
+INSERT [dbo].[JarsRules] ([Name], [Description], [SourceCriteriaString], [SourceTypeName], [RulePassesWhen], [TargetCriteriaString], [TargetTypeName], [RuleRunsOn],  [RuleEvaluation]) VALUES (N'Carpenters can only take plumbing jobs', N'Must be Plumber', N'[LineOfWork] In (''CP'', ''CAP'', ''CARP'', ''CAR'')', N'BOSEntity', N'IsTrue', N'[Id] = 1', N'JarsResource', N'OnDragDrop',  N'Both')
+GO
+INSERT [dbo].[JarsRules] ([Name], [Description], [SourceCriteriaString], [SourceTypeName], [RulePassesWhen], [TargetCriteriaString], [TargetTypeName], [RuleRunsOn],  [RuleEvaluation]) VALUES (N'Can not book in the past', N'The start date must be greater then now, else the appointment can not be booked.', N'[StartDate] >= LocalDateTimeNow()', N'BOSEntity', N'IsTrue', N'', N'.', N'OnDragDrop', N'SourceOnly')
+GO
+INSERT [dbo].[JarsRules] ([Name], [Description], [SourceCriteriaString], [SourceTypeName], [RulePassesWhen], [TargetCriteriaString], [TargetTypeName], [RuleRunsOn],  [RuleEvaluation]) VALUES (N'Do not book T vehicles', N'The idea is that resourses with T vehicles can not be used.', N'StartsWith([VehicleRegistration], ''T'')', N'JarsResource', N'IsFalse', N'StartsWith([VehicleRegistration], ''T'')', N'JarsResource', N'OnDragDrop',  N'TargetOnly')
+GO
+INSERT [dbo].[JarsRules] ([Name], [Description], [SourceCriteriaString], [SourceTypeName], [RulePassesWhen], [TargetCriteriaString], [TargetTypeName], [RuleRunsOn],  [RuleEvaluation]) VALUES (N'Only Electric jobs', NULL, N'[LineOfWork] In (''EL'', ''ELE'', ''ELEC'')', N'BOSEntity', N'IsTrue', N'[Id] = 2', N'JarsResource', N'OnDragDrop',  N'Both')
+GO
+INSERT [dbo].[JarsRules] ([Name], [Description], [SourceCriteriaString], [SourceTypeName], [RulePassesWhen], [TargetCriteriaString], [TargetTypeName], [RuleRunsOn],  [RuleEvaluation]) VALUES (N'Only Plumbing jobs', NULL, N'[LineOfWork] In (''PL'', ''PLU'', ''PLUMB'')', N'BOSEntity', N'IsTrue', N'[Id] = 3', N'JarsResource', N'OnDragDrop, OnChange',  N'Both')
+
+GO

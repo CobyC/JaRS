@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8CFD36A-8EF4-4081-A5CB-7E8B28978508}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JARS.Core.Interfaces</RootNamespace>
+    <AssemblyName>JARS.Core.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Azure|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Azure\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\IPluginAsBehaviourMetadata.cs" />
+    <Compile Include="Attributes\IProcessorMetadata.cs" />
+    <Compile Include="Attributes\IPluginAsViewOptionMetadata.cs" />
+    <Compile Include="Attributes\IPluginToTabControlMetadata.cs" />
+    <Compile Include="Entities\IActivityLog.cs" />
+    <Compile Include="Entities\IEntityWithCompletionDate.cs" />
+    <Compile Include="Entities\IEntityWithNotes.cs" />
+    <Compile Include="Entities\IEntityWithDuration.cs" />
+    <Compile Include="Rules\Attributes\AllowRuleProcessingAttribute.cs" />
+    <Compile Include="ClientServices\IClientServiceContract.cs" />
+    <Compile Include="ClientServices\IClientServiceFactory.cs" />
+    <Compile Include="Attributes\IExportDataContextMetadata.cs" />
+    <Compile Include="Entities\IEntityWithIsActive.cs" />
+    <Compile Include="Entities\IEntityWithActualDates.cs" />
+    <Compile Include="Entities\IEntityWithAppointing.cs" />
+    <Compile Include="Entities\IEntityWithAudit.cs" />
+    <Compile Include="Entities\IBasicEntity.cs" />
+    <Compile Include="Entities\IEntityWithIsEmergency.cs" />
+    <Compile Include="Entities\IEntityWithEntityList.cs" />
+    <Compile Include="Entities\IExternalEntityBase.cs" />
+    <Compile Include="Entities\IJarsUserBase.cs" />
+    <Compile Include="Entities\ILineItemEntity.cs" />
+    <Compile Include="Entities\IEntityWithLineOfWork.cs" />
+    <Compile Include="Entities\IEntityWithLocation.cs" />
+    <Compile Include="Entities\IEntityWithPriority.cs" />
+    <Compile Include="Entities\IEntityWithProgressStatus.cs" />
+    <Compile Include="Entities\IEntityWithRecurrence.cs" />
+    <Compile Include="Entities\IEntityWithExternalReference.cs" />
+    <Compile Include="Entities\IResource.cs" />
+    <Compile Include="Entities\IResourceGroup.cs" />
+    <Compile Include="Entities\IEntityWithShowOnMobile.cs" />
+    <Compile Include="Entities\IEntityWithStatusLabels.cs" />
+    <Compile Include="Entities\IEntityWithTargetDate.cs" />
+    <Compile Include="Entities\IViewOptionCustomEntity.cs" />
+    <Compile Include="Plugins\IPluginForEntity.cs" />
+    <Compile Include="Plugins\IPluginWithActivate.cs" />
+    <Compile Include="Plugins\IPluginWithExecuteAsync.cs" />
+    <Compile Include="Plugins\IPluginWithExecute.cs" />
+    <Compile Include="Plugins\IPluginWithInitialise.cs" />
+    <Compile Include="Plugins\IPluginWithSettings.cs" />
+    <Compile Include="Plugins\IPluginWithStateInfoAsync.cs" />
+    <Compile Include="Plugins\IPluginWithStateInfo.cs" />
+    <Compile Include="Plugins\IRequirePermission.cs" />
+    <Compile Include="Processors\IBusinessProcessor.cs" />
+    <Compile Include="Processors\IProcessor.cs" />
+    <Compile Include="Processors\IProcessorFactory.cs" />
+    <Compile Include="Entities\IEntityBase.cs" />
+    <Compile Include="Entities\IEntityWithIntegration.cs" />
+    <Compile Include="Plugins\IPluginFactory.cs" />
+    <Compile Include="Processors\IRuleProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IDataRepositoryBase.cs" />
+    <Compile Include="Repositories\IDataRepositoryFactory.cs" />
+    <Compile Include="Plugins\IPluginBase.cs" />
+    <Compile Include="Attributes\IPluginMetadata.cs" />
+    <Compile Include="Attributes\IPluginToMainRibbonMetadata.cs" />
+    <Compile Include="Rules\IJarsRulesEvaluator.cs" />
+    <Compile Include="Rules\IJarsRule.cs" />
+    <Compile Include="Rules\RulesEnums.cs" />
+    <Compile Include="Security\IRolesAndPermissions.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
