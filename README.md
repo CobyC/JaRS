@@ -20,6 +20,7 @@ _**JaRS is build on .Net Frameworks but also makes use of 3rd party frameworks a
 - You will have to get a licence from [DevExpress](https://www.devexpress.com/) to be able to build the software
   - you can use a trail version, but it is limited.
 - The current client is a WinForms application
+- To build the ServiceHost (IIS) projects, you will have to run Visual studio as administrator, this is an IIS restriction.
 
 ### Technologies used in JaRS
 [**_Managed Extensibility Framework (MEF)_**](https://docs.microsoft.com/en-us/dotnet/framework/mef/) for extensibility (and Dependency Injection), this is part of the .Net Framework.
