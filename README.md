@@ -3,6 +3,7 @@
 
 Watch the demo video posted on my linked in profile to see what JaRS is.
 
+[YouTube Video](https://www.youtube.com/watch?time_continue=1&v=To_z8fO58UA&feature=emb_logo)
 [LinkedIn Post](https://www.linkedin.com/posts/cobyc_jars-job-and-resource-scheduler-introduction-activity-6635079166310002689-h08Q)
 
 
