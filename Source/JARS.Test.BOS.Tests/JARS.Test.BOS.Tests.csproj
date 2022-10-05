@@ -66,7 +66,7 @@
       <Version>5.1.6</Version>
     </PackageReference>
     <PackageReference Include="ServiceStack">
-      <Version>5.8.0</Version>
+      <Version>5.9.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
