@@ -104,7 +104,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="ServiceStack">
-      <Version>5.8.0</Version>
+      <Version>5.9.2</Version>
     </PackageReference>
     <PackageReference Include="ServiceStack.Api.OpenApi">
       <Version>5.8.0</Version>
