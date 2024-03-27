@@ -423,5 +423,10 @@ namespace JARS.SS.Auth
             //if (_CacheEntityRepo != null)
             //    _CacheEntityRepo = null;
         }
+
+        public void RemoveExpiredEntries()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

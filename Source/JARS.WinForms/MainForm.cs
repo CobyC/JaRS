@@ -1,4 +1,5 @@
 ﻿using DevExpress.LookAndFeel;
+using DevExpress.Portable.Input;
 using DevExpress.Utils.Menu;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Helpers;
@@ -1680,10 +1681,11 @@ namespace JARS.WinForms
             {
                 if (MouseButtons == e.Button)
                 {
+                    var portE = new PortableMouseEventArgs(PortableMouseButtons.None, e.Clicks, e.X, e.Y, e.Delta);
                     if (schedulerControl.IsUpdateLocked)
                     {
                         schedulerControl.Services.AppointmentSelection.ClearSelection();
-                        schedulerControl.Services.MouseHandler.OnMouseUp(e);
+                        schedulerControl.Services.MouseHandler.OnMouseUp(portE);
                     }
                     else
                     {
@@ -1698,7 +1700,7 @@ namespace JARS.WinForms
                                 Rectangle rect = new Rectangle(resHeader.Bounds.X + 2, resHeader.Bounds.Bottom - 25, 24, 24);
                                 if (rect.Contains(e.Location))
                                 {
-                                    schedulerControl.Services.MouseHandler.OnMouseUp(e);
+                                    schedulerControl.Services.MouseHandler.OnMouseUp(portE);
                                     if (!(resHeader.Resource.RowHandle is JarsResource cuResourcer))
                                         return;
                                     var x = _JarsProcessors.Where(p => p.Metadata.LinkedEntityType == typeof(JarsResource) && p.Metadata.AdditionalProcessorType == typeof(IPluginToResourceHeader));
@@ -1727,7 +1729,7 @@ namespace JARS.WinForms
                     if (schedulerControl.IsUpdateLocked)
                     {
                         schedulerControl.Services.AppointmentSelection.ClearSelection();
-                        schedulerControl.Services.MouseHandler.OnMouseUp(e);
+                        schedulerControl.Services.MouseHandler.OnMouseUp(new PortableMouseEventArgs(PortableMouseButtons.None, e.Clicks, e.X, e.Y, e.Delta));
                     }
                 }
             }

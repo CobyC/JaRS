@@ -63,6 +63,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JARS.Core.Interfaces\JARS.Core.Interfaces.csproj">
+      <Project>{C8CFD36A-8EF4-4081-A5CB-7E8B28978508}</Project>
+      <Name>JARS.Core.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\JARS.Core.Winforms.Interfaces\JARS.Core.WinForms.Interfaces.csproj">
       <Project>{EB29AFCB-AB85-46B1-9703-7026C0A6D0C3}</Project>
       <Name>JARS.Core.WinForms.Interfaces</Name>

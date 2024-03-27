@@ -59,10 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ServiceStack">
-      <Version>5.8.0</Version>
+      <Version>8.2.2</Version>
     </PackageReference>
     <PackageReference Include="ServiceStack.Client">
-      <Version>5.8.0</Version>
+      <Version>8.2.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

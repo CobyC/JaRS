@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{953F6DC3-1321-4D29-B7A5-E3E009222820}</ProjectGuid>
+    <ProjectGuid>{0A9DCCE1-E89F-4312-B6DE-1A1C5C06EC29}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JARS.Bussiness.Bootstrap</RootNamespace>
-    <AssemblyName>JARS.Business.Bootstrap</AssemblyName>
+    <RootNamespace>JARS.Core</RootNamespace>
+    <AssemblyName>JARS.Core</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -43,12 +43,14 @@
     <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.ComponentModel.Composition.Registration" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,39 +60,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MEFLoader.cs" />
+    <Compile Include="Attributes\DataProtectionAttribute.cs" />
+    <Compile Include="Attributes\ExportPluginAsBehaviour.cs" />
+    <Compile Include="Attributes\ExportPluginAsViewOption.cs" />
+    <Compile Include="Attributes\ExportPluginToTabControlAttribute.cs" />
+    <Compile Include="Attributes\ExportProcessorAttribute.cs" />
+    <Compile Include="Attributes\LookupValueAttribute.cs" />
+    <Compile Include="Entities\AuditableEntityBase.cs" />
+    <Compile Include="Entities\BasicEntity.cs" />
+    <Compile Include="Entities\EntityBase.cs" />
+    <Compile Include="Entities\JarsUserBase.cs" />
+    <Compile Include="Exceptions\UserRoleOrPermissionException.cs" />
+    <Compile Include="Entities\IntegratableEntityBase.cs" />
+    <Compile Include="Entities\ExternalEntityBase.cs" />
+    <Compile Include="Rules\InterfaceRules.cs" />
+    <Compile Include="Rules\JarsRule.cs" />
+    <Compile Include="Rules\Utils\CriteriaHelper.cs" />
+    <Compile Include="Security\RolesAndPermissions.cs" />
+    <Compile Include="Utils\CheckInfoItem.cs" />
+    <Compile Include="Extensions\EnumTypeExtensions.cs" />
+    <Compile Include="Extensions\StringManipulationExtensions.cs" />
+    <Compile Include="Extensions\SystemTypeExtensions.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Security\JarsCoreSecurity.cs" />
+    <Compile Include="Processors\ProcessorFactory.cs" />
+    <Compile Include="Exceptions\ClientNotFoundException.cs" />
+    <Compile Include="JarsCore.cs" />
+    <Compile Include="Repositories\DataRepositoryFactory.cs" />
+    <Compile Include="Exceptions\NotFoundException.cs" />
+    <Compile Include="Plugins\PluginBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\AssemblyLoaderUtil.cs" />
+    <Compile Include="Attributes\ExportDataContextAttribute.cs" />
+    <Compile Include="Attributes\ExportPluginAttribute.cs" />
+    <Compile Include="Attributes\ExportPluginToMainRibbonAttribute.cs" />
+    <Compile Include="Extensions\ObjectToDataTableExtension.cs" />
+    <Compile Include="Extensions\PluginWithStateExtensions.cs" />
+    <Compile Include="Extensions\PluginExtensions.cs" />
+    <Compile Include="Extensions\PropertyHelperExtensions.cs" />
+    <Compile Include="Plugins\PluginFactory.cs" />
+    <Compile Include="Extensions\RegistrationBuilderMefGenericsBugFixExtension.cs" />
+    <Compile Include="Utils\EntityIdComparer.cs" />
+    <Compile Include="Utils\LinqExpressionBuilder.cs" />
+    <Compile Include="Utils\SearchEntity.cs" />
+    <Compile Include="Utils\TypeNameItem.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JARS.Core.Data.Interfaces\JARS.Core.Data.Interfaces.csproj">
-      <Project>{FEEB3E69-1BB9-4460-866B-A56DA3CC6424}</Project>
-      <Name>JARS.Core.Data.Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\JARS.Core.Interfaces\JARS.Core.Interfaces.csproj">
       <Project>{C8CFD36A-8EF4-4081-A5CB-7E8B28978508}</Project>
       <Name>JARS.Core.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JARS.Core\JARS.Core.csproj">
-      <Project>{0A9DCCE1-E89F-4312-B6DE-1A1C5C06EC29}</Project>
-      <Name>JARS.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\JARS.Data.NH.Jars\JARS.Data.NH.Jars.csproj">
-      <Project>{C53FA771-3BBF-428F-8BC2-D2EF7B475D8C}</Project>
-      <Name>JARS.Data.NH.Jars</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\JARS.Data.NH\JARS.Data.NH.csproj">
-      <Project>{EC30D0E0-D17F-4848-8CFF-C257767F087B}</Project>
-      <Name>JARS.Data.NH</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Composition">
-      <Version>1.0.31</Version>
-    </PackageReference>
-    <PackageReference Include="System.Composition">
-      <Version>8.0.0</Version>
+    <PackageReference Include="log4net">
+      <Version>2.0.8</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

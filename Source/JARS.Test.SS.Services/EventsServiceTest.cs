@@ -182,9 +182,10 @@ namespace JARS.Test.SS.Services
 
     public class CustomCredentialsAuthProvider : CredentialsAuthProvider
     {
-        public override bool TryAuthenticate(IServiceBase authService, string userName, string password)
+        public override Task<bool> TryAuthenticateAsync(IServiceBase authService, string userName, string password, CancellationToken token = default)
         {
-            return userName == "user" && password == "pass";
+            return Task.Run(() => { return userName == "user" && password == "pass"; });
+            //return base.TryAuthenticateAsync(authService, userName, password, token);
         }
     }
 
@@ -247,9 +248,9 @@ namespace JARS.Test.SS.Services
         public void TestFixtureTearDown()
         {
 
-           // var redisEvents = appHost.Resolve<IServerEvents>() as RedisServerEvents;
-           // if (redisEvents != null)
-           //     redisEvents.Dispose();
+            // var redisEvents = appHost.Resolve<IServerEvents>() as RedisServerEvents;
+            // if (redisEvents != null)
+            //     redisEvents.Dispose();
 
             appHost.Dispose();
         }
@@ -449,8 +450,8 @@ namespace JARS.Test.SS.Services
                 var msg1 = await taskMsg1.WaitAsync();
                 var msg2 = await taskMsg2.WaitAsync();
 
-                Assert.IsTrue(msg1.EventId>0);
-                Assert.IsTrue(msg2.EventId>0);
+                Assert.IsTrue(msg1.EventId > 0);
+                Assert.IsTrue(msg2.EventId > 0);
                 Assert.Equals(msg1.Selector, "cmd.chat");
                 Assert.Equals(msg2.Selector, "cmd.chat");
 
@@ -511,7 +512,7 @@ namespace JARS.Test.SS.Services
 
                 await tcs.Task.WaitAsync();
 
-               // Assert.That(heartbeats, Is.GreaterThanOrEqualTo(2));
+                // Assert.That(heartbeats, Is.GreaterThanOrEqualTo(2));
             }
         }
 
@@ -588,7 +589,7 @@ namespace JARS.Test.SS.Services
 
                     var chatMsg2 = msg2.Json.FromJson<ChatMessage>();
 
-                   // Assert.That(chatMsg2.Message, Is.EqualTo("msg2 from client2"));
+                    // Assert.That(chatMsg2.Message, Is.EqualTo("msg2 from client2"));
                 }
             }
             catch (Exception ex)
@@ -729,8 +730,8 @@ namespace JARS.Test.SS.Services
                 await msgTask.WaitAsync();
 
                 var chatMsg = TestJavaScriptReceiver.ChatReceived;
-               // Assert.That(chatMsg, Is.Not.Null);
-               // Assert.That(chatMsg.Message, Is.EqualTo("chat msg"));
+                // Assert.That(chatMsg, Is.Not.Null);
+                // Assert.That(chatMsg.Message, Is.EqualTo("chat msg"));
 
                 msgTask = client1.WaitForNextMessage();
                 client1.PostRaw("cmd.announce", "This is your captain speaking...");

@@ -99,7 +99,7 @@ namespace JARS.SS.Auth
                 var existingUser = GetUserAuthByUserName(newUser.UserName);
                 if (existingUser != null
                     && (exceptForExistingUser == null || existingUser.Id != exceptForExistingUser.Id))
-                    throw new ArgumentException(string.Format(ErrorMessages.UserAlreadyExistsTemplate1, newUser.UserName.SafeInput()));
+                    throw new ArgumentException(string.Format(ErrorMessages.UserAlreadyExistsFmt, newUser.UserName.SafeInput()));
             }
 
             if (newUser.Email != null)
@@ -107,7 +107,7 @@ namespace JARS.SS.Auth
                 var existingUser = GetUserAuthByUserName(newUser.Email);
                 if (existingUser != null
                     && (exceptForExistingUser == null || existingUser.Id != exceptForExistingUser.Id))
-                    throw new ArgumentException(string.Format(ErrorMessages.EmailAlreadyExistsTemplate1, newUser.Email.SafeInput()));
+                    throw new ArgumentException(string.Format(ErrorMessages.EmailAlreadyExistsFmt, newUser.Email.SafeInput()));
             }
         }
 

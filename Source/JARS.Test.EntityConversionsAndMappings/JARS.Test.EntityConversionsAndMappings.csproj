@@ -50,13 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MSTest.TestAdapter">
-      <Version>2.0.0</Version>
+      <Version>3.2.2</Version>
     </PackageReference>
     <PackageReference Include="MSTest.TestFramework">
-      <Version>2.0.0</Version>
+      <Version>3.2.2</Version>
     </PackageReference>
     <PackageReference Include="ServiceStack">
-      <Version>5.8.0</Version>
+      <Version>8.2.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

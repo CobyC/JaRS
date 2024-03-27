@@ -1,4 +1,5 @@
-﻿using DevExpress.Services;
+﻿using DevExpress.Portable.Input;
+using DevExpress.Services;
 using DevExpress.XtraScheduler;
 using DevExpress.XtraScheduler.Drawing;
 using System;
@@ -17,7 +18,7 @@ namespace JARS.Core.WinForms.Handlers
             this._schedulerProvider = schedulerProvider;
         }
 
-        public override void OnMouseDown(MouseEventArgs e)
+        public override void OnMouseDown(PortableMouseEventArgs e)
         {
             SchedulerControl control = _schedulerProvider as SchedulerControl;
             SchedulerHitInfo hitInfo = control.ActiveView.ViewInfo.CalcHitInfo(e.Location, false);
@@ -30,7 +31,8 @@ namespace JARS.Core.WinForms.Handlers
                     return;
                 }
             }
-            base.OnMouseDown(e);
+            base.OnMouseDown(e);            
         }
+        
     }
 }
